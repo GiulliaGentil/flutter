@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quizflutter/quizz.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,8 +15,7 @@ class HomePage extends StatelessWidget {
         centerTitle: false,
         actions: const [Icon(Icons.search)],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -88,22 +88,27 @@ class HomePage extends StatelessWidget {
             margin: const EdgeInsets.all(16),
             height: 300,
             width: double.infinity,
-            child: Card(
-              color: Colors.blue[50],
-              elevation: 4,
-              child: Column(
-                children: [
-                  Image.asset('assets/golfinho.png', width: 200, height: 150),
-                  Text('Mostre seu conhecimento marítimo!',
-                  style: GoogleFonts.indieFlower(fontSize: 24, fontWeight: FontWeight.bold)),
-                  ListTile(
-                    leading: const Icon(Icons.start, color: Colors.amberAccent),
-                    title: Text( '1500 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
-                  )
+            child: GestureDetector(
+              onTap: ()=> Navigator.of(context).push(MaterialPageRoute(builder: (_)
+              => const Quiz())),
+              child: Card(
+                color: Colors.blue[50],
+                elevation: 4,
+                child: Column(
 
-                ],
-            )
+                  children: [
+                    Image.asset('assets/golfinho.png', width: 200, height: 150),
+                    Text('Mostre seu conhecimento marítimo!',
+                    style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold)),
+                    ListTile(
+                      leading: const Icon(Icons.start, color: Colors.amberAccent),
+                      title: Text( '1500 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
+                    )
+              
+                  ],
               )
+                ),
+            ),
           ),
           SizedBox(
             height: 200,
@@ -111,7 +116,7 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: [
                 Container(
-                  margin: const EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(16),
                   height: 100,
                   width: 200,
                   child: Card(color: Colors.green[50],
@@ -123,10 +128,32 @@ class HomePage extends StatelessWidget {
                         child: Image.asset('assets/sapo.png', width: 50, height: 50),
                         ),
                       Text('Mostre seu conhecimento terrestre!',
-                      style: GoogleFonts.indieFlower(fontSize: 24, fontWeight: FontWeight.bold)),
+                      style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.bold)),
                       ListTile(
                         leading: const Icon(Icons.start, color: Colors.amberAccent),
-                        
+                        title: Text('1450 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
+                      )
+                    ],
+                  )
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 100,
+                  width: 200,
+                  child: Card(color: Colors.blueGrey[100],
+                  elevation: 4,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset('assets/ave.png', width: 50, height: 50),
+                        ),
+                      Text('Mostre seu conhecimento aéreo!',
+                      style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.bold)),
+                      ListTile(
+                        leading: const Icon(Icons.start, color: Colors.amberAccent),
+                        title: Text('1200 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
                       )
                     ],
                   )
