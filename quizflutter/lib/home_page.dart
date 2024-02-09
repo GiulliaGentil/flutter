@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
                     Text('Mostre seu conhecimento marítimo!',
                     style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold)),
                     ListTile(
-                      leading: const Icon(Icons.start, color: Colors.amberAccent),
+                      leading: const Icon(Icons.star, color: Colors.amberAccent),
                       title: Text( '1500 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
                     )
               
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
                       Text('Mostre seu conhecimento terrestre!',
                       style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.bold)),
                       ListTile(
-                        leading: const Icon(Icons.start, color: Colors.amberAccent),
+                        leading: const Icon(Icons.star, color: Colors.amberAccent),
                         title: Text('1450 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
                       )
                     ],
@@ -152,7 +152,7 @@ class HomePage extends StatelessWidget {
                       Text('Mostre seu conhecimento aéreo!',
                       style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.bold)),
                       ListTile(
-                        leading: const Icon(Icons.start, color: Colors.amberAccent),
+                        leading: const Icon(Icons.star, color: Colors.amberAccent),
                         title: Text('1200 pontos', style: GoogleFonts.roboto(fontWeight: FontWeight.w300)),
                       )
                     ],
