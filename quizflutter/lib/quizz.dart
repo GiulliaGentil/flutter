@@ -74,7 +74,7 @@ class _QuizState extends State<Quiz> {
       appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text('Quiz marítimo!',
-              style: GoogleFonts.ibmPlexMono(
+              style: GoogleFonts.poppins(
                   fontSize: 20, fontWeight: FontWeight.w400))),
       body: Column(
         children: [
@@ -86,7 +86,7 @@ class _QuizState extends State<Quiz> {
             child: Center(
               child: Text(
                 currentQuestion['question'],
-                style: GoogleFonts.delaGothicOne(
+                style: GoogleFonts.poppins(
                     color: Colors.black, fontSize: 18),
                 textAlign: TextAlign.center,
               ),
@@ -121,7 +121,7 @@ Widget meuBtn(String resposta, VoidCallback onPressed, Color? color) =>
             backgroundColor: color, padding: const EdgeInsets.all(16)),
         child: Text(
           resposta,
-          style: GoogleFonts.ibmPlexMono(color: Colors.white),
+          style: GoogleFonts.poppins(color: Colors.white),
           textAlign: TextAlign.center,
         ),
       ),
